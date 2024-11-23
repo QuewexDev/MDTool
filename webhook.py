@@ -25,7 +25,7 @@ def send_webhook(url = None, message = "This message created using QuewexWebhook
     except requests.exceptions.HTTPError as err:
         print(err)
 
-def spam_webhook(url, message = "This message created using QuewexWebhook", username = "QuewexWebhook", delay = 0.5, times=5):
+def spam_webhook(url, message = "@everyone", username = "MDTool", delay = 0.5, times=5):
     data = {
         "content" : message
     }
@@ -57,5 +57,5 @@ def spam_webhook(url, message = "This message created using QuewexWebhook", user
 
 def getGuildInfo(url):
     result = requests.get(url)
-
+    print("Your result is getting printed...")
     return result.json()
