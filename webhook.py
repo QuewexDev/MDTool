@@ -51,6 +51,10 @@ def spam_webhook(url, message = "@everyone", username = "MDTool", delay = 0.5, t
                 except requests.exceptions.HTTPError as err:
                     print(err)
                     break
+                except Exception as err:
+                    print(err)
+                    input("Press Enter to continue")
+                    break
                 time.sleep(delay)
         except KeyboardInterrupt:
             print("Stopped")
