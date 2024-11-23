@@ -65,6 +65,7 @@ def menu():
         case 4:
             try:
                 if not os.path.isfile("url.txt"):
+                    print("Failed to load url.txt! Type Webhook URL here.")
                     url = str(input("Webhook URL: "))
                     with open("url.txt", "w+") as f:
                         f.write(url)
